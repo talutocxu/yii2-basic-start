@@ -1,6 +1,7 @@
 {
     "name": "dominus77/yii2-basic-start",
     "description": "Basic start template on Yii2",
+    "homepage": "http://dominus77.github.io/yii2-basic-start",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
@@ -23,6 +24,10 @@
         "process-timeout": 1800
     },
     "extra": {
+        "writable": [
+          "runtime",
+          "web/assets"
+        ],
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
