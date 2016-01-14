@@ -89,3 +89,14 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+/*Grid css*/
+.grid-view td.action-column {
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 0.1em;
+    max-width: 5em;
+}
+.grid-view div.input-daterange {
+    width: 16em;
+}

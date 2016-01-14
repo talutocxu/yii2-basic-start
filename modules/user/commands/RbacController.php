@@ -43,11 +43,11 @@ class RbacController extends Controller
 
         //Добавляем роли
         $user = $auth->createRole('user');
-        $user->description = Module::t('module', 'RBAC_USER');
+        $user->description = Module::t('module', 'USER_ROLE_USER');
         $user->ruleName = $rule->name;
         $auth->add($user);
         $moder = $auth->createRole('moder');
-        $moder->description = Module::t('module', 'RBAC_MODERATOR');
+        $moder->description = Module::t('module', 'USER_ROLE_MODERATOR');
         $moder->ruleName = $rule->name;
         $auth->add($moder);
 
@@ -55,7 +55,7 @@ class RbacController extends Controller
         $auth->addChild($moder, $user);
         $auth->addChild($moder, $blog);
         $admin = $auth->createRole('admin');
-        $admin->description = Module::t('module', 'RBAC_ADMINISTRATOR');
+        $admin->description = Module::t('module', 'USER_ROLE_ADMINISTRATOR');
         $admin->ruleName = $rule->name;
         $auth->add($admin);
         $auth->addChild($admin, $moder);

@@ -184,6 +184,19 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
+     * Finds user by username or email
+     *
+     * @param string $username
+     * @return static|null
+     */
+    public static function findByUsernameOrEmail($username)
+    {
+        return static::find()
+            ->where(['or', ['username' => $username],['email' => $username]])
+            ->one();
+    }
+
+    /**
      * Validates password
      *
      * @param string $password password to validate

@@ -30,7 +30,7 @@ return [
     'USER_ROLE' => 'Role',
     'USER_STATUS_BLOCKED' => 'Blocked',
     'USER_STATUS_ACTIVE' => 'Active',
-    'USER_STATUS_WAIT' => 'Waits of verify',
+    'USER_STATUS_WAIT' => 'Waits',
     'USER_VERIFY_CODE' => 'Verify code',
     'USER_BUTTON_SIGNUP' => 'Signup',
     'USER_BUTTON_LOGIN' => 'Login',
@@ -65,7 +65,7 @@ return [
     'IGNORE_IF_DO_NOT_REGISTER' => 'If you do not register on our site just remove this mail.',
 
     'RBAC_MANAGE_USERS' => 'Manage users',
-    'RBAC_USER' => 'User',
-    'RBAC_MODERATOR' => 'Moderator',
-    'RBAC_ADMINISTRATOR' => 'Administrator',
+    'USER_ROLE_ADMINISTRATOR' => 'Administrator',
+    'USER_ROLE_MODERATOR' => 'Moderator',
+    'USER_ROLE_USER' => 'User',
 ];

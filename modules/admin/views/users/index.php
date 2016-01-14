@@ -29,7 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            'id',
+            //['class' => 'yii\grid\SerialColumn'],
+            //'id',
             [
                 'filter' => DatePicker::widget([
                     'model' => $searchModel,
@@ -58,9 +59,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     User::STATUS_BLOCKED => 'default',
                 ],
             ],
+            [
+                'filter' => User::getRolesArray(),
+                'attribute' => 'role',
+                'value' => 'RoleName',
+            ],
 
             ['class' => ActionColumn::className()],
         ],
     ]); ?>
-
 </div>

@@ -30,7 +30,7 @@ return [
     'USER_ROLE' => 'Роль',
     'USER_STATUS_BLOCKED' => 'Заблокирован',
     'USER_STATUS_ACTIVE' => 'Активен',
-    'USER_STATUS_WAIT' => 'Ожидает подтверждения',
+    'USER_STATUS_WAIT' => 'Ожидает',
     'USER_VERIFY_CODE' => 'Код',
     'USER_BUTTON_SIGNUP' => 'Зарегистрироваться',
     'USER_BUTTON_LOGIN' => 'Войти',
@@ -65,7 +65,7 @@ return [
     'IGNORE_IF_DO_NOT_REGISTER' => 'Если Вы не регистрировались на нашем сайте, то просто удалите это письмо.',
 
     'RBAC_MANAGE_USERS' => 'Управление пользователями',
-    'RBAC_USER' => 'Пользователь',
-    'RBAC_MODERATOR' => 'Модератор',
-    'RBAC_ADMINISTRATOR' => 'Администратор',
+    'USER_ROLE_ADMINISTRATOR' => 'Администратор',
+    'USER_ROLE_MODERATOR' => 'Модератор',
+    'USER_ROLE_USER' => 'Пользователь',
 ];
