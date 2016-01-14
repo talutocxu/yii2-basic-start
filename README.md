@@ -3,9 +3,8 @@ Basic start template on Yii2
 
 Source code of yii2-basic-start.
 
-[Home](http://dominus77.github.io/yii2-basic-start)
-
-[Source](https://github.com/Dominus77/yii2-basic-start)
+- [Home](http://dominus77.github.io/yii2-basic-start)
+- [Source](https://github.com/Dominus77/yii2-basic-start)
 
 REQUIREMENTS
 ------------
