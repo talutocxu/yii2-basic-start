@@ -18,7 +18,11 @@
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*"
+        "yiisoft/yii2-faker": "*",
+        "bower-asset/html5shiv": "*",
+        "bower-asset/respond": "*",
+        "kartik-v/yii2-widget-datepicker": "*",
+        "kartik-v/yii2-field-range": "*"
     },
     "config": {
         "process-timeout": 1800

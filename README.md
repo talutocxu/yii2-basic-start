@@ -1,10 +1,34 @@
 Basic start template on Yii2
 ============================
 
-Source code of yii2-basic-start.
+Source code of yii2-basic-start module structure.
 
 - [Web page](http://dominus77.github.io/yii2-basic-start)
 - [github.com](https://github.com/Dominus77/yii2-basic-start)
+
+Base components:
+------
+
+Pages
+- Home
+- Contact
+- Sign Up
+- Login
+
+Modules
+- admin
+- main
+- user
+
+Functional
+- Reset password
+- Confirmation by email
+
+System
+- RBAC (php file)
+- Manage users
+- Console commands
+- i18n
 
 Requirements
 ------
@@ -34,6 +58,30 @@ Init an environment:
 
 ~~~
 php init
+~~~
+
+Apply migration:
+
+~~~
+php yii migrate
+~~~
+
+Create user:
+Enter the command and follow the instructions
+
+~~~
+php yii user/users/create
+~~~
+
+- Username: set username;
+- Email: set email username;
+- Password: set password username (min 6 symbol);
+- Roles: set roles username (user, moder, admin);
+
+Init an RBAC
+
+~~~
+php yii user/rbac/init
 ~~~
 
 You can then access the application through the following URL:
