@@ -3,16 +3,16 @@ Basic start template on Yii2
 
 Source code of yii2-basic-start.
 
-- [Home](http://dominus77.github.io/yii2-basic-start)
-- [Source](https://github.com/Dominus77/yii2-basic-start)
+- [Web page](http://dominus77.github.io/yii2-basic-start)
+- [github.com](https://github.com/Dominus77/yii2-basic-start)
 
-REQUIREMENTS
-------------
+Requirements
+------
 
 The minimum requirement by this project template that your Web server supports PHP 5.4.0.
 
-INSTALLATION
-------------
+Installation
+------
 
 Create a project:
 

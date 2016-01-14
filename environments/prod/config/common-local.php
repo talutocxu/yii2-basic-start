@@ -4,15 +4,10 @@ return [
     'components' => [
         'db' => [
             'dsn' => 'mysql:host=localhost;dbname=yii2_basic_start',
-            'username' => '',
+            'username' => 'root',
             'password' => '',
-            'tablePrefix' => 'tbl_',
+            'tablePrefix' => '',
         ],
-        'mailer' => [
-            'useFileTransport' => true,
-        ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
+        'mailer' => [],
     ],
 ];
