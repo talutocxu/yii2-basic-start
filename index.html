@@ -41,11 +41,47 @@
         <h1>
 <a id="basic-start-template-on-yii2" class="anchor" href="#basic-start-template-on-yii2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic start template on Yii2</h1>
 
-<p>Source code of yii2-basic-start.</p>
+<p>Source code of yii2-basic-start module structure.</p>
 
 <ul>
 <li><a href="http://dominus77.github.io/yii2-basic-start">Web page</a></li>
 <li><a href="https://github.com/Dominus77/yii2-basic-start">github.com</a></li>
+</ul>
+
+<h2>
+<a id="base-components" class="anchor" href="#base-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base components</h2>
+
+<p>Pages</p>
+
+<ul>
+<li>Home</li>
+<li>Contact</li>
+<li>Sign Up</li>
+<li>Login</li>
+</ul>
+
+<p>Modules</p>
+
+<ul>
+<li>admin</li>
+<li>main</li>
+<li>user</li>
+</ul>
+
+<p>Functional</p>
+
+<ul>
+<li>Reset password</li>
+<li>Confirmation by email</li>
+</ul>
+
+<p>System</p>
+
+<ul>
+<li>RBAC (php file)</li>
+<li>Manage users</li>
+<li>Console commands</li>
+<li>i18n</li>
 </ul>
 
 <h2>
@@ -73,6 +109,28 @@ composer install
 <p>Init an environment:</p>
 
 <pre><code>php init
+</code></pre>
+
+<p>Apply migration:</p>
+
+<pre><code>php yii migrate
+</code></pre>
+
+<p>Create user, enter the command and follow the instructions:</p>
+
+<pre><code>php yii user/users/create
+</code></pre>
+
+<ul>
+<li>Username: set username;</li>
+<li>Email: set email username;</li>
+<li>Password: set password username (min 6 symbol);</li>
+<li>Roles: set roles username (user, moder, admin);</li>
+</ul>
+
+<p>Init an RBAC</p>
+
+<pre><code>php yii user/rbac/init
 </code></pre>
 
 <p>You can then access the application through the following URL:</p>
