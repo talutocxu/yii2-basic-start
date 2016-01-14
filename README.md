@@ -6,7 +6,7 @@ Source code of yii2-basic-start module structure.
 - [Web page](http://dominus77.github.io/yii2-basic-start)
 - [github.com](https://github.com/Dominus77/yii2-basic-start)
 
-Base components:
+Base components
 ------
 
 Pages
@@ -60,14 +60,15 @@ Init an environment:
 php init
 ~~~
 
+Create a database, default configure: yii2-basic-start
+
 Apply migration:
 
 ~~~
 php yii migrate
 ~~~
 
-Create user:
-Enter the command and follow the instructions
+Create user, enter the command and follow the instructions:
 
 ~~~
 php yii user/users/create
