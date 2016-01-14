@@ -41,3 +41,20 @@ You can then access the application through the following URL:
 ~~~
 http://localhost/basic-project/web/
 ~~~
+
+Create .htaccess file or add folder \web
+
+~~~
+AddDefaultCharset utf-8
+Options +FollowSymLinks
+IndexIgnore */*
+
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+~~~
