@@ -44,17 +44,17 @@
 <p>Source code of yii2-basic-start.</p>
 
 <ul>
-<li><a href="http://dominus77.github.io/yii2-basic-start">Home</a></li>
-<li><a href="https://github.com/Dominus77/yii2-basic-start">Source</a></li>
+<li><a href="http://dominus77.github.io/yii2-basic-start">Web page</a></li>
+<li><a href="https://github.com/Dominus77/yii2-basic-start">github.com</a></li>
 </ul>
 
 <h2>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>REQUIREMENTS</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>The minimum requirement by this project template that your Web server supports PHP 5.4.0.</p>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSTALLATION</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Create a project:</p>
 
@@ -78,6 +78,22 @@ composer install
 <p>You can then access the application through the following URL:</p>
 
 <pre><code>http://localhost/basic-project/web/
+</code></pre>
+
+<p>Create .htaccess file or add folder \web</p>
+
+<pre><code>AddDefaultCharset utf-8
+Options +FollowSymLinks
+IndexIgnore */*
+
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
 </code></pre>
       </section>
 
