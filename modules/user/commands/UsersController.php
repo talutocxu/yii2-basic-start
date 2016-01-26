@@ -32,7 +32,8 @@ class UsersController extends Controller
             'error' => 'More than 6 symbols',
         ]));
         $model->generateAuthKey();
-        $this->readValue($model, 'role');
+        $model->role = $this->select('Role:', User::getRolesArray());
+        $model->status = $this->select('Status:', User::getStatusesArray());
         $this->log($model->save());
     }
 
