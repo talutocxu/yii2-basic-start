@@ -68,6 +68,12 @@ Apply migration:
 php yii migrate
 ~~~
 
+See all available commands
+
+~~~
+php yii
+~~~
+
 Create user, enter the command and follow the instructions:
 
 ~~~
@@ -78,6 +84,7 @@ php yii user/users/create
 - Email: set email username;
 - Password: set password username (min 6 symbol);
 - Roles: set roles username (user, moder, admin);
+- Roles: set status username (user, moder, admin);
 
 Init an RBAC
 
