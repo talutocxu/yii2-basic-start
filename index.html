@@ -39,7 +39,7 @@
         </div>
 
         <h1>
-<a id="basic-start-template-on-yii2" class="anchor" href="#basic-start-template-on-yii2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic start template on Yii2</h1>
+<a id="basic-start-template-on-yii2" class="anchor" href="#basic-start-template-on-yii2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic start template on Yii2</h1>
 
 <p>Source code of yii2-basic-start module structure.</p>
 
@@ -49,7 +49,7 @@
 </ul>
 
 <h2>
-<a id="base-components" class="anchor" href="#base-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base components</h2>
+<a id="base-components" class="anchor" href="#base-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Base components</h2>
 
 <p>Pages</p>
 
@@ -85,12 +85,12 @@
 </ul>
 
 <h2>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>The minimum requirement by this project template that your Web server supports PHP 5.4.0.</p>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Create a project:</p>
 
@@ -118,6 +118,11 @@ composer install
 <pre><code>php yii migrate
 </code></pre>
 
+<p>See all available commands</p>
+
+<pre><code>php yii
+</code></pre>
+
 <p>Create user, enter the command and follow the instructions:</p>
 
 <pre><code>php yii user/users/create
@@ -127,7 +132,8 @@ composer install
 <li>Username: set username;</li>
 <li>Email: set email username;</li>
 <li>Password: set password username (min 6 symbol);</li>
-<li>Roles: set roles username (user, moder, admin);</li>
+<li>Roles: set roles username (user, moder, admin, ? - Help);</li>
+<li>Status: set status username (0 - blocked, 1 - active, 2 - wait, ? - Help);</li>
 </ul>
 
 <p>Init an RBAC</p>
