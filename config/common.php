@@ -17,6 +17,9 @@ return [
         'app\modules\main\Bootstrap',
         'app\modules\user\Bootstrap',
     ],
+    'as afterAction' => [
+        'class' => '\app\components\behavior\LastVisitBehavior',
+    ],
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',

@@ -25,6 +25,7 @@ return [
     'USER_REMEMBER_ME' => 'Запомнить меня',
     'USER_CREATED' => 'Создан',
     'USER_UPDATED' => 'Обновлён',
+    'USER_LAST_VISIT' => 'Последний визит',
     'USER_EMAIL' => 'Email',
     'USER_STATUS' => 'Статус',
     'USER_ROLE' => 'Роль',

@@ -68,7 +68,7 @@ Apply migration:
 php yii migrate
 ~~~
 
-See all available commands
+See all available commands:
 
 ~~~
 php yii

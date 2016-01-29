@@ -17,6 +17,7 @@ use yii\web\IdentityInterface;
  * @property integer $id
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $last_visit
  * @property string $username
  * @property string $auth_key
  * @property string $email_confirm_token
@@ -87,6 +88,7 @@ class User extends ActiveRecord implements IdentityInterface
             'id' => 'ID',
             'created_at' => Module::t('module', 'USER_CREATED'),
             'updated_at' => Module::t('module', 'USER_UPDATED'),
+            'last_visit' => Module::t('module', 'USER_LAST_VISIT'),
             'username' => Module::t('module', 'USER_USERNAME'),
             'email' => Module::t('module', 'USER_EMAIL'),
             'status' => Module::t('module', 'USER_STATUS'),

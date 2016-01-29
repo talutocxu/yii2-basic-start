@@ -16,6 +16,7 @@ class m160114_184701_create_user_table extends Migration
             'id' => $this->primaryKey(),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
+            'last_visit' => $this->integer(),
             'username' => $this->string()->notNull(),
             'auth_key' => $this->string(32),
             'email_confirm_token' => $this->string(),

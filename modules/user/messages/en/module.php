@@ -25,6 +25,7 @@ return [
     'USER_REMEMBER_ME' => 'Remember me',
     'USER_CREATED' => 'Created at',
     'USER_UPDATED' => 'Updated at',
+    'USER_LAST_VISIT' => 'Last visit',
     'USER_EMAIL' => 'Email',
     'USER_STATUS' => 'Status',
     'USER_ROLE' => 'Role',
