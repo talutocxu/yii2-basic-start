@@ -23,6 +23,7 @@ Modules
 Functional
 - Reset password
 - Confirmation by email
+- Last visit
 
 System
 - RBAC (php file)
