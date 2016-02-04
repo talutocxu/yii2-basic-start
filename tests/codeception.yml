@@ -1,24 +1,26 @@
 actor: Tester
-#coverage:
-#    #c3_url: http://localhost:8080/index-test.php/
-#    enabled: true
-#    #remote: true
-#    #remote_config: '../tests/codeception.yml'
-#    white_list:
-#        include:
-#            - ../models/*
-#            - ../controllers/*
-#            - ../commands/*
-#            - ../mail/*
-#    blacklist:
-#        include:
-#            - ../assets/*
-#            - ../config/*
-#            - ../runtime/*
-#            - ../vendor/*
-#            - ../views/*
-#            - ../web/*
-#            - ../tests/*
+coverage:
+    enabled: true
+    whitelist:
+        include:
+            - ../components/*
+            - ../mail/*
+            - ../modules/*
+            - ../views/*
+        exclude:
+            - ../modules/admin/messages/*
+            - ../modules/main/messages/*
+            - ../modules/user/messages/*
+    blacklist:
+        include:
+            - ../assets/*
+            - ../config/*
+            - ../runtime/*
+            - ../environments/*
+            - ../messages/*
+            - ../vendor/*
+            - ../web/*
+            - ../tests/*
 paths:
     tests: codeception
     log: codeception/_output
@@ -33,5 +35,4 @@ settings:
 config:
     # the entry script URL (with host info) for functional and acceptance tests
     # PLEASE ADJUST IT TO THE ACTUAL ENTRY SCRIPT URL
-     test_entry_url: http://yii2-basic-start.loc:8080/index-test.php
-    # test_entry_url: http://localhost:8080/index-test.php
+    test_entry_url: http://localhost:8080/index-test.php
