@@ -5,7 +5,8 @@
 $I = new FunctionalTester($scenario);
 $I->wantTo('ensure that home page works');
 $I->amOnPage(Yii::$app->homeUrl);
-$I->see('My Company');
-$I->seeLink('About');
-$I->click('About');
-$I->see('This is the About page.');
+$I->see('Congratulations!', 'h1');
+
+$I->seeLink('Contact');
+$I->click('Contact');
+$I->see('Contact', 'h1');
