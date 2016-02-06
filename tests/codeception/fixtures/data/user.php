@@ -12,6 +12,7 @@ return [
         'updated_at' => '1439635619',
         'email' => 'admin@example.com',
         'status' => 1,
+        'role' => 'admin',
     ],
     [
         'username' => 'reset',
@@ -24,5 +25,6 @@ return [
         'updated_at' => '1439635619',
         'email' => 'reset@example.com',
         'status' => 1,
+        'role' => 'user',
     ],
 ];
