@@ -2,7 +2,7 @@
 
 namespace tests\codeception\unit\modules\admin\models;
 
-use app\modules\admin\models\User;
+use app\modules\user\models\backend\User;
 use tests\codeception\fixtures\UserFixture;
 use yii\codeception\DbTestCase;
 use Codeception\Specify;
@@ -16,7 +16,7 @@ class UserTest extends DbTestCase
 
     public function testValidateEmptyNewPassword()
     {
-        $model = new User([
+        $model = new \app\modules\user\models\backend\User([
             'username' => 'TestName',
             'email' => 'other@example.com',
             'newPassword' => '',
@@ -50,7 +50,7 @@ class UserTest extends DbTestCase
         expect('password is too short', $model->errors)->hasKey('newPassword');
         expect('password repeat is required', $model->errors)->hasKey('newPasswordRepeat');
 
-        $model = new User([
+        $model = new \app\modules\user\models\backend\User([
             'username' => 'TestName',
             'email' => 'other@example.com',
             'newPassword' => 'correct-password',
@@ -81,7 +81,7 @@ class UserTest extends DbTestCase
     public function testSaveNewPassword()
     {
         /** @var User $model */
-        $model = User::findOne($this->users[0]['id']);
+        $model = \app\modules\user\models\backend\User::findOne($this->users[0]['id']);
 
         $model->scenario = User::SCENARIO_ADMIN_UPDATE;
         $model->newPassword = 'new-password';
