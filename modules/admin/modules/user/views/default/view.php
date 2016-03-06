@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use app\modules\admin\Module;
+use app\modules\admin\modules\user\Module;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\User */
+/* @var $model app\modules\admin\modules\user\models\User */
 
 $this->title = $model->username;
-$this->params['breadcrumbs'][] = ['label' => Module::t('module', 'ADMIN'), 'url' => ['default/index']];
+$this->params['breadcrumbs'][] = ['label' => Module::t('module', 'ADMIN'), 'url' => ['/admin/default/index']];
 $this->params['breadcrumbs'][] = ['label' => Module::t('module', 'ADMIN_USERS'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

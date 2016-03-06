@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\admin\models\search;
+namespace app\modules\admin\modules\user\models\search;
 
-use app\modules\admin\models\User;
-use app\modules\admin\Module;
+use app\modules\admin\modules\user\models\User;
+use app\modules\admin\modules\user\Module;
 use app\modules\user\Module as UserModule;
 use Yii;
 use yii\base\Model;
