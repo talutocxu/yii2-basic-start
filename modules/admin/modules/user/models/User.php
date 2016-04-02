@@ -6,7 +6,7 @@ use yii\helpers\ArrayHelper;
 use app\modules\admin\modules\user\Module;
 use Yii;
 
-class User extends \app\modules\user\models\User {
+class User extends \app\modules\admin\models\User {
     const SCENARIO_ADMIN_CREATE = 'adminCreate';
     const SCENARIO_ADMIN_UPDATE = 'adminUpdate';
 
@@ -28,8 +28,8 @@ class User extends \app\modules\user\models\User {
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios[self::SCENARIO_ADMIN_CREATE] = ['username', 'email', 'status', 'newPassword', 'newPasswordRepeat'];
-        $scenarios[self::SCENARIO_ADMIN_UPDATE] = ['username', 'email', 'status', 'newPassword', 'newPasswordRepeat'];
+        $scenarios[self::SCENARIO_ADMIN_CREATE] = ['username', 'email', 'status', 'newPassword', 'newPasswordRepeat', 'role'];
+        $scenarios[self::SCENARIO_ADMIN_UPDATE] = ['username', 'email', 'status', 'newPassword', 'newPasswordRepeat','role'];
         return $scenarios;
     }
 

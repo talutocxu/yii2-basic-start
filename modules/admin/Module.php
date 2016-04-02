@@ -5,6 +5,7 @@ namespace app\modules\admin;
 use yii\filters\AccessControl;
 use yii\console\Application as ConsoleApplication;
 use Yii;
+use app\modules\admin\models\User;
 
 class Module extends \yii\base\Module
 {
@@ -18,7 +19,7 @@ class Module extends \yii\base\Module
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => [User::ROLE_MODER],
                     ],
                 ],
             ],
@@ -28,6 +29,8 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
+        // $this->setLayoutPath($this->getViewPath() . '/layouts');
+        // $this->layout = 'main';
         if (Yii::$app instanceof ConsoleApplication) {
             $this->controllerNamespace = 'app\modules\admin\commands';
         }
