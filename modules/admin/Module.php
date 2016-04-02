@@ -29,8 +29,8 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-        // $this->setLayoutPath($this->getViewPath() . '/layouts');
-        // $this->layout = 'main';
+        $this->setLayoutPath($this->getViewPath() . '/layouts');
+        $this->layout = 'main';
         if (Yii::$app instanceof ConsoleApplication) {
             $this->controllerNamespace = 'app\modules\admin\commands';
         }
