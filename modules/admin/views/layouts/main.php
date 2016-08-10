@@ -2,6 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+
 use app\components\widgets\Alert;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -30,7 +31,7 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' => Url::to(['/admin/default/index']),
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -39,22 +40,15 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'activateParents' => true,
         'items' => array_filter([
-            ['label' => Yii::t('app', 'NAV_HOME'), 'url' => ['/main/default/index']],
-            ['label' => Yii::t('app', 'NAW_CONTACT'), 'url' => ['/main/contact/index']],
-            Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_SIGNUP'), 'url' => ['/user/default/signup']] :
-                false,
-            Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_LOGIN'), 'url' => ['/user/default/login']] :
-                false,
             !Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_ADMIN'), 'items' => [
-                    ['label' => Yii::t('app', 'NAV_ADMIN'), 'url' => ['/admin/default/index']],
-                    ['label' => Yii::t('app', 'NAV_ADMIN_USERS'), 'url' => ['/admin/users/default/index']],
-                ]] :
-                false,
-            !Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_PROFILE'), 'items' => [
+                ['label' => Yii::t('app', 'NAV_MY_MENU'), 'items' => [
+                    [
+                        'label' => Yii::t('app', 'NAV_FRONTEND'),
+                        'url' => Yii::$app->homeUrl,
+                        'linkOptions' => [
+                            'target' => '_blank',
+                        ]
+                    ],
                     ['label' => Yii::t('app', 'NAV_PROFILE'), 'url' => ['/user/profile/index']],
                     ['label' => Yii::t('app', 'NAV_LOGOUT'),
                         'url' => ['/user/default/logout'],

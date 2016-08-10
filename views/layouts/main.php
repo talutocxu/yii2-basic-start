@@ -2,11 +2,13 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+
 use app\components\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use app\modules\user\models\User;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -46,13 +48,12 @@ AppAsset::register($this);
                 ['label' => Yii::t('app', 'NAV_LOGIN'), 'url' => ['/user/default/login']] :
                 false,
             !Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_ADMIN'), 'items' => [
-                    ['label' => Yii::t('app', 'NAV_ADMIN'), 'url' => ['/admin/default/index']],
-                    ['label' => Yii::t('app', 'NAV_ADMIN_USERS'), 'url' => ['/admin/users/default/index']],
-                ]] :
-                false,
-            !Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'NAV_PROFILE'), 'items' => [
+                ['label' => Yii::t('app', 'NAV_MY_MENU'), 'items' => [
+                    [
+                        'label' => Yii::t('app', 'NAV_ADMIN'),
+                        'url' => ['/admin/default/index'],
+                        'visible' => Yii::$app->user->can(User::ROLE_MODER),
+                    ],
                     ['label' => Yii::t('app', 'NAV_PROFILE'), 'url' => ['/user/profile/index']],
                     ['label' => Yii::t('app', 'NAV_LOGOUT'),
                         'url' => ['/user/default/logout'],
