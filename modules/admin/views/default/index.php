@@ -7,7 +7,6 @@ use app\modules\admin\Module;
 /* @var $model \app\modules\admin\modules\user\models\User */
 
 $this->title = Module::t('module', 'ADMIN');
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="admin-default-index">
     <h1><?= Html::encode($this->title) ?></h1>
