@@ -9,9 +9,6 @@ $params = ArrayHelper::merge(
 
 $config = [
     'id' => 'app',
-    'as afterAction' => [
-        'class' => '\app\components\behavior\LastVisitBehavior',
-    ],
     'components' => [
         'user' => [
             'identityClass' => 'app\modules\user\models\User',
@@ -26,6 +23,9 @@ $config = [
         ],
     ],
     'params' => $params,
+    'as afterAction' => [
+        'class' => '\app\components\behavior\LastVisitBehavior',
+    ],
 ];
 
 if (YII_ENV_DEV) {
