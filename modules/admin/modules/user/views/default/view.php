@@ -37,7 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'last_visit:datetime',
             [
                 'attribute' => 'status',
-                'value' => $model->getStatusName(),
+                'format' => 'raw',
+                'value' => $model->getStatusLabelName(),
             ],
             [
                 'attribute' => 'role',

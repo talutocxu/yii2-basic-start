@@ -10,6 +10,7 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -106,11 +107,39 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    /**
+     * @return mixed
+     */
     public function getStatusName()
     {
         return ArrayHelper::getValue(self::getStatusesArray(), $this->status);
     }
 
+    /**
+     * @return string
+     */
+    public function getStatusLabelName()
+    {
+        $class = ArrayHelper::getValue(self::getLabelsArray(), $this->status, 'default');
+        $html = Html::tag('span', Html::encode(self::getStatusName()), ['class' => 'label label-' . $class]);
+        return $html;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getLabelsArray()
+    {
+        return [
+            self::STATUS_ACTIVE => 'success',
+            self::STATUS_WAIT => 'warning',
+            self::STATUS_BLOCKED => 'default',
+        ];
+    }
+
+    /**
+     * @return array
+     */
     public static function getStatusesArray()
     {
         return [
@@ -120,11 +149,17 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    /**
+     * @return mixed
+     */
     public function getRoleName()
     {
         return ArrayHelper::getValue(self::getRolesArray(), $this->role);
     }
 
+    /**
+     * @return array
+     */
     public static function getRolesArray()
     {
         return [
@@ -135,8 +170,8 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-    * @inheritdoc
-    */
+     * @inheritdoc
+     */
     public static function findIdentity($id)
     {
         return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
@@ -194,7 +229,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findByUsernameOrEmail($username)
     {
         return static::find()
-            ->where(['or', ['username' => $username],['email' => $username]])
+            ->where(['or', ['username' => $username], ['email' => $username]])
             ->one();
     }
 
@@ -282,7 +317,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         $parts = explode('_', $token);
-        $timestamp = (int) end($parts);
+        $timestamp = (int)end($parts);
         return $timestamp + $expire >= time();
     }
 

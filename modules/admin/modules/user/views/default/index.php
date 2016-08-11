@@ -52,11 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => User::getStatusesArray(),
                 'attribute' => 'status',
                 'name' => 'statusName',
-                'cssCLasses' => [
-                    User::STATUS_ACTIVE => 'success',
-                    User::STATUS_WAIT => 'warning',
-                    User::STATUS_BLOCKED => 'default',
-                ],
+                'cssCLasses' => User::getLabelsArray(),
             ],
             [
                 'filter' => User::getRolesArray(),
