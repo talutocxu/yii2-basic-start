@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d23d4b08c1fe1497c352dd5a898fc96f",
-    "content-hash": "679036f28cf4aafd08be8ada45ee90c0",
+    "hash": "f49067c2dbc19d1ab7f5fa47a86d17e7",
+    "content-hash": "9b4f3a83eb67f54f7c05e3108ac31dd2",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -298,6 +298,54 @@
                 "html"
             ],
             "time": "2016-07-16 12:58:58"
+        },
+        {
+            "name": "fortawesome/font-awesome",
+            "version": "v4.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/8e241f209faa1dd2182c9fdc9c352d8806504a4e",
+                "reference": "8e241f209faa1dd2182c9fdc9c352d8806504a4e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "jekyll": "1.0.2",
+                "lessc": "1.4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.6.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OFL-1.1",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Gandy",
+                    "email": "dave@fontawesome.io",
+                    "homepage": "http://twitter.com/davegandy",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The iconic font and CSS framework",
+            "homepage": "http://fontawesome.io/",
+            "keywords": [
+                "FontAwesome",
+                "awesome",
+                "bootstrap",
+                "font",
+                "icon"
+            ],
+            "time": "2016-05-13 15:42:25"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -776,16 +824,16 @@
         },
         {
             "name": "kartik-v/yii2-krajee-base",
-            "version": "1.8.5",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "7f7a45ffe193fe673f72b9effc01b08499f2a454"
+                "reference": "713a1c4ad5b3f9be2832586584679c4b094c6937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/7f7a45ffe193fe673f72b9effc01b08499f2a454",
-                "reference": "7f7a45ffe193fe673f72b9effc01b08499f2a454",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/713a1c4ad5b3f9be2832586584679c4b094c6937",
+                "reference": "713a1c4ad5b3f9be2832586584679c4b094c6937",
                 "shasum": ""
             },
             "require": {
@@ -823,20 +871,20 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-05-07 19:45:52"
+            "time": "2016-08-19 17:48:27"
         },
         {
             "name": "kartik-v/yii2-widget-datepicker",
-            "version": "v1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
-                "reference": "b76e08a432950d658cadc7597178426a47a994ac"
+                "reference": "43fab52cd8932939bd18821a664a87a2547d25db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/b76e08a432950d658cadc7597178426a47a994ac",
-                "reference": "b76e08a432950d658cadc7597178426a47a994ac",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/43fab52cd8932939bd18821a664a87a2547d25db",
+                "reference": "43fab52cd8932939bd18821a664a87a2547d25db",
                 "shasum": ""
             },
             "require": {
@@ -877,7 +925,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-06-28 17:51:26"
+            "time": "2016-08-16 18:53:36"
         },
         {
             "name": "phpspec/php-diff",
